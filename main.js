@@ -37,32 +37,50 @@ function playSoundKeyBoard(letter) {
 window.addEventListener("keydown", getLetterkeyboard);
 
 function getLetterkeyboard(event) {
-  if (event.code === "KeyA") {
-    playSoundKeyBoard(event.code);
-    console.log("tocaste A");
-  } else if (event.code === "KeyS") {
-    playSoundKeyBoard(event.code);
-    console.log("tocaste S");
-  } else if (event.code === "KeyD") {
-    playSoundKeyBoard(event.code);
-    console.log("tocaste D");
-  } else if (event.code === "KeyF") {
-    playSoundKeyBoard(event.code);
-    console.log("tocaste F");
-  } else if (event.code === "KeyG") {
-    playSoundKeyBoard(event.code);
-    console.log("tocaste G");
-  } else if (event.code === "KeyH") {
-    playSoundKeyBoard(event.code);
-    console.log("tocaste H");
-  } else if (event.code === "KeyJ") {
-    playSoundKeyBoard(event.code);
-    console.log("tocaste J");
-  } else if (event.code === "KeyK") {
-    playSoundKeyBoard(event.code);
-    console.log("tocaste K");
-  } else if (event.code === "KeyL") {
-    playSoundKeyBoard(event.code);
-    console.log("tocaste L");
+  switch (event.code) {
+    case "KeyA":
+      playSoundKeyBoard(event.code);
+      console.log("tocaste A");
+      break;
+
+    case "KeyS":
+      playSoundKeyBoard(event.code);
+      console.log("tocaste S");
+      break;
+
+    case "KeyD":
+      playSoundKeyBoard(event.code);
+      console.log("tocaste D");
+      break;
+
+    case "KeyF":
+      playSoundKeyBoard(event.code);
+      console.log("tocaste F");
+      break;
+
+    case "KeyG":
+      playSoundKeyBoard(event.code);
+      console.log("tocaste G");
+      break;
+
+    case "KeyH":
+      playSoundKeyBoard(event.code);
+      console.log("tocaste H");
+      break;
+
+    case "KeyJ":
+      playSoundKeyBoard(event.code);
+      console.log("tocaste J");
+      break;
+
+    case "KeyK":
+      playSoundKeyBoard(event.code);
+      console.log("tocaste K");
+      break;
+
+    case "KeyL":
+      playSoundKeyBoard(event.code);
+      console.log("tocaste L");
+      break;
   }
 }
