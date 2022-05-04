@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta authors="Claudia Campos & Yasmín Lorenzo" />
-    <meta name="description" content="Hack a Boss project 1/>
-    <link rel=" stylesheet" href="./index.css" />
-    <title>Javascript drum</title>
-  </head>
 
-  <body>
-    <main>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta authors="Claudia Campos & Yasmín Lorenzo" />
+  <meta name="description" content="Hack a Boss | Drums Game/>
+  <link rel=" icon" type="image/x-icon" href="./img/favicon.ico">
+  <title>Drums Game</title>
+  <link rel=" stylesheet" href="./index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <section>
+      <h2>Drums Game</h2>
+      <h3>Instructions</h3>
+      <p>You can play the drums with your mouse or keyboard. Remember you can record your jam session .</p>
       <button data-sound="./sounds/crash.wav" class="KeyA" id="crash-btn">
         Crash A
       </button>
-      <button
-        data-sound="./sounds/hihat-open.wav"
-        class="KeyS"
-        id="hihat-open-btn"
-      >
+      <button data-sound="./sounds/hihat-open.wav" class="KeyS" id="hihat-open-btn">
         Hi Hat Open S
       </button>
-      <button
-        data-sound="./sounds/hihat-close.wav"
-        class="KeyD"
-        id="hihat-close-btn"
-      >
+      <button data-sound="./sounds/hihat-close.wav" class="KeyD" id="hihat-close-btn">
         Hi Hat Close D
       </button>
       <button data-sound="./sounds/kick.wav" class="KeyF" id="kick-btn">
@@ -47,7 +46,12 @@
       <button data-sound="./sounds/tom-low.wav" class="KeyL" id="tom-low-btn">
         Tom Low L
       </button>
-    </main>
-    <script src="./main.js"></script>
-  </body>
+    </section>
+  </main>
+
+  <footer>Drums Game | Copyright © 2022</footer>
+
+  <script src="./main.js"></script>
+</body>
+
 </html>

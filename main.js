@@ -84,3 +84,7 @@ function getLetterkeyboard(event) {
       break;
   }
 }
+
+/* function delayedAlert() {
+  const timeoutID = window.setTimeout(playSound, 12000);
+} */
