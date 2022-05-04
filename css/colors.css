@@ -1,4 +1,5 @@
 :root {
---primary-color:hsl(0, 0%, 0%);
---light-color: hsl(49, 90%, 61%);
+--main-color: hsl(49, 90%, 61%);
+--dark-color:hsl(0, 0%, 0%);
+--light-color: hsl(0, 0%, 100%);
 }
