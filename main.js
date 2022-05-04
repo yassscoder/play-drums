@@ -26,3 +26,43 @@ function playSound(event) {
   const audio = new Audio(soundSource);
   audio.play();
 }
+
+function playSoundKeyBoard(letter) {
+  const targetLetter = document.querySelector(`.${letter}`);
+  const soundSource = targetLetter.dataset.sound;
+  const audio = new Audio(soundSource);
+  audio.play();
+}
+
+window.addEventListener("keydown", getLetterkeyboard);
+
+function getLetterkeyboard(event) {
+  if (event.code === "KeyA") {
+    playSoundKeyBoard(event.code);
+    console.log("tocaste A");
+  } else if (event.code === "KeyS") {
+    playSoundKeyBoard(event.code);
+    console.log("tocaste S");
+  } else if (event.code === "KeyD") {
+    playSoundKeyBoard(event.code);
+    console.log("tocaste D");
+  } else if (event.code === "KeyF") {
+    playSoundKeyBoard(event.code);
+    console.log("tocaste F");
+  } else if (event.code === "KeyG") {
+    playSoundKeyBoard(event.code);
+    console.log("tocaste G");
+  } else if (event.code === "KeyH") {
+    playSoundKeyBoard(event.code);
+    console.log("tocaste H");
+  } else if (event.code === "KeyJ") {
+    playSoundKeyBoard(event.code);
+    console.log("tocaste J");
+  } else if (event.code === "KeyK") {
+    playSoundKeyBoard(event.code);
+    console.log("tocaste K");
+  } else if (event.code === "KeyL") {
+    playSoundKeyBoard(event.code);
+    console.log("tocaste L");
+  }
+}
