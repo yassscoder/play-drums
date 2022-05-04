@@ -1,9 +1,7 @@
 "use strict";
 
-//const audioCrash = new Audio("./sounds/crash.wav");
-
 const crashBtn = document.querySelector("#crash-btn");
-const hihatOpenBtn = document.querySelector("#low-tom-btn");
+const hihatOpenBtn = document.querySelector("#hihat-open-btn");
 const hihatCloseBtn = document.querySelector("#hihat-close-btn");
 const kickBtn = document.querySelector("#kick-btn");
 const rideBtn = document.querySelector("#ride-btn");
