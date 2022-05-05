@@ -29,8 +29,9 @@ function getSoundSource(event) {
     return soundSource;
   } else if (event.key && document.querySelector(`.${event.code}`) === null) {
     console.log(event);
-    const error = new ReferenceError("Played key is invalid"); // what's the way to throw the error in catch??
+    const error = new ReferenceError("Played key is invalid");
     alert("Played key is invalid");
+    throw error;
   } else {
     const targetButton = event.target;
     soundSource = targetButton.dataset.sound;
