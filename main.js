@@ -49,9 +49,8 @@ function playWithKeyOrButton(event) {
   }
 }
 
-window.addEventListener("keydown", playWithKeyOrButton);
+window.addEventListener("keydown", delaySound);
 
-// window.addEventListener("keydown", delaySound);
-// function delaySound(event) {
-//   setTimeout(playWithKeyOrButton, 1000, event); 
-// }
+function delaySound(event) {
+  setTimeout(playWithKeyOrButton, 1000, event);
+}
