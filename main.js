@@ -20,17 +20,27 @@ tomHighBtn.addEventListener("click", playWithKeyOrButton);
 tomMidBtn.addEventListener("click", playWithKeyOrButton);
 tomLowBtn.addEventListener("click", playWithKeyOrButton);
 
+const validInputKeys = new Map();
+validInputKeys.set(65, "./sounds/crash.wav");
+validInputKeys.set(83, "./sounds/hihat-open.wav");
+validInputKeys.set(68, "./sounds/hihat-close.wav");
+validInputKeys.set(70, "./sounds/kick.wav");
+validInputKeys.set(71, "./sounds/ride.wav");
+validInputKeys.set(72, "./sounds/snare.wav");
+validInputKeys.set(74, "./sounds/tom-high.wav");
+validInputKeys.set(75, "./sounds/tom-mid.wav");
+validInputKeys.set(76, "./sounds/tom-low.wav");
+
 function getSoundSource(event) {
   let soundSource;
-  if (event.key && document.querySelector(`.${event.code}`) !== null) {
-    const targetLetter = document.querySelector(`.${event.code}`);
-    soundSource = targetLetter.dataset.sound;
-    console.log(event);
+  const pressedKey = event.keyCode;
+
+  if (validInputKeys.has(pressedKey)) {
+    soundSource = validInputKeys.get(pressedKey);
     return soundSource;
-  } else if (event.key && document.querySelector(`.${event.code}`) === null) {
-    console.log(event);
-    const error = new ReferenceError("Played key is invalid");
-    alert("Played key is invalid");
+  } else if (event.key && !validInputKeys.has(pressedKey)) {
+    const error = new ReferenceError("Pressed key is not valid");
+    alert("Pressed key is not valid");
     throw error;
   } else {
     const targetButton = event.target;
