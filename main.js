@@ -10,81 +10,47 @@ const tomHighBtn = document.querySelector("#tom-high-btn");
 const tomMidBtn = document.querySelector("#tom-mid-btn");
 const tomLowBtn = document.querySelector("#tom-low-btn");
 
-crashBtn.addEventListener("click", playSound);
-hihatOpenBtn.addEventListener("click", playSound);
-hihatCloseBtn.addEventListener("click", playSound);
-kickBtn.addEventListener("click", playSound);
-rideBtn.addEventListener("click", playSound);
-snareBtn.addEventListener("click", playSound);
-tomHighBtn.addEventListener("click", playSound);
-tomMidBtn.addEventListener("click", playSound);
-tomLowBtn.addEventListener("click", playSound);
+crashBtn.addEventListener("click", playWithKeyOrButton);
+hihatOpenBtn.addEventListener("click", playWithKeyOrButton);
+hihatCloseBtn.addEventListener("click", playWithKeyOrButton);
+kickBtn.addEventListener("click", playWithKeyOrButton);
+rideBtn.addEventListener("click", playWithKeyOrButton);
+snareBtn.addEventListener("click", playWithKeyOrButton);
+tomHighBtn.addEventListener("click", playWithKeyOrButton);
+tomMidBtn.addEventListener("click", playWithKeyOrButton);
+tomLowBtn.addEventListener("click", playWithKeyOrButton);
 
-function playSound(event) {
-  const targetButton = event.target;
-  const soundSource = targetButton.dataset.sound;
-  const audio = new Audio(soundSource);
-  audio.play();
-}
-
-function playSoundKeyBoard(letter) {
-  const targetLetter = document.querySelector(`.${letter}`);
-  const soundSource = targetLetter.dataset.sound;
-  const audio = new Audio(soundSource);
-  audio.play();
-}
-
-window.addEventListener("keydown", getLetterkeyboard);
-
-function getLetterkeyboard(event) {
-  switch (event.code) {
-    case "KeyA":
-      playSoundKeyBoard(event.code);
-      console.log("tocaste A");
-      break;
-
-    case "KeyS":
-      playSoundKeyBoard(event.code);
-      console.log("tocaste S");
-      break;
-
-    case "KeyD":
-      playSoundKeyBoard(event.code);
-      console.log("tocaste D");
-      break;
-
-    case "KeyF":
-      playSoundKeyBoard(event.code);
-      console.log("tocaste F");
-      break;
-
-    case "KeyG":
-      playSoundKeyBoard(event.code);
-      console.log("tocaste G");
-      break;
-
-    case "KeyH":
-      playSoundKeyBoard(event.code);
-      console.log("tocaste H");
-      break;
-
-    case "KeyJ":
-      playSoundKeyBoard(event.code);
-      console.log("tocaste J");
-      break;
-
-    case "KeyK":
-      playSoundKeyBoard(event.code);
-      console.log("tocaste K");
-      break;
-
-    case "KeyL":
-      playSoundKeyBoard(event.code);
-      console.log("tocaste L");
-      break;
+function getSoundSource(event) {
+  let soundSource;
+  if (event.key && document.querySelector(`.${event.code}`) !== null) {
+    const targetLetter = document.querySelector(`.${event.code}`);
+    soundSource = targetLetter.dataset.sound;
+    console.log(event);
+    return soundSource;
+  } else if (event.key && document.querySelector(`.${event.code}`) === null) {
+    console.log(event);
+    const error = new ReferenceError("Played key is invalid"); // what's the way to throw the error in catch??
+    alert("Played key is invalid");
+  } else {
+    const targetButton = event.target;
+    soundSource = targetButton.dataset.sound;
+    return soundSource;
   }
 }
 
-/* function delayedAlert() {
-  const timeoutID = window.setTimeout(playSound, 12000);
-} */
+function playWithKeyOrButton(event) {
+  try {
+    const soundSrc = getSoundSource(event);
+    const audio = new Audio(soundSrc);
+    audio.play();
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+window.addEventListener("keydown", playWithKeyOrButton);
+
+// window.addEventListener("keydown", delaySound);
+// function delaySound(event) {
+//   setTimeout(playWithKeyOrButton, 1000, event); 
+// }
