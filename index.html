@@ -14,39 +14,49 @@
 </head>
 
 <body>
+  <header>
+    <h1>Drums Game</h1>
+  </header>
   <main>
     <section>
-      <h2>Drums Game</h2>
-      <h3>Instructions</h3>
-      <p>You can play the drums with your mouse or keyboard. Remember you can record your jam session .</p>
-      <button data-sound="./sounds/crash.wav" class="KeyA" id="crash-btn">
-        Crash A
-      </button>
-      <button data-sound="./sounds/hihat-open.wav" class="KeyS" id="hihat-open-btn">
-        Hi Hat Open S
-      </button>
-      <button data-sound="./sounds/hihat-close.wav" class="KeyD" id="hihat-close-btn">
-        Hi Hat Close D
-      </button>
-      <button data-sound="./sounds/kick.wav" class="KeyF" id="kick-btn">
-        Kick F
-      </button>
-      <button data-sound="./sounds/ride.wav" class="KeyG" id="ride-btn">
-        Ride G
-      </button>
-      <button data-sound="./sounds/snare.wav" class="KeyH" id="snare-btn">
-        Snare H
-      </button>
-      <button data-sound="./sounds/tom-high.wav" class="KeyJ" id="tom-high-btn">
-        Tom High J
-      </button>
-      <button data-sound="./sounds/tom-mid.wav" class="KeyK" id="tom-mid-btn">
-        Tom Mid K
-      </button>
-      <button data-sound="./sounds/tom-low.wav" class="KeyL" id="tom-low-btn">
-        Tom Low L
-      </button>
+      <p>Play the drums with your mouse or keyboard. Remember you can record your sound.</p>
+      <section class="drum">
+        <button data-sound="./sounds/crash.wav" class="KeyA" id="crash-btn">
+          <span>A</span>Crash
+        </button>
+        <button data-sound="./sounds/hihat-open.wav" class="KeyS" id="hihat-open-btn">
+          <span>S</span>Hi-Hat-O
+        </button>
+        <button data-sound="./sounds/hihat-close.wav" class="KeyD" id="hihat-close-btn">
+          <span>D</span>Hi-Hat-C
+        </button>
+        <button data-sound="./sounds/kick.wav" class="KeyF" id="kick-btn">
+          <span>F</span>Kick
+        </button>
+        <button data-sound="./sounds/ride.wav" class="KeyG" id="ride-btn">
+          <span>G</span>Ride
+        </button>
+        <button data-sound="./sounds/snare.wav" class="KeyH" id="snare-btn">
+          <span>H</span>Snare
+        </button>
+        <button data-sound="./sounds/tom-high.wav" class="KeyJ" id="tom-high-btn">
+          <span>J</span>Tom-H
+        </button>
+        <button data-sound="./sounds/tom-mid.wav" class="KeyK" id="tom-mid-btn">
+          <span>K</span>Tom-M
+        </button>
+        <button data-sound="./sounds/tom-low.wav" class="KeyL" id="tom-low-btn">
+          <span>L</span>Tom-L
+        </button>
+      </section>
+
+      <section class="recordControls">
+        <button>Rec</button>
+        <button>Stop</button>
+        <button>Play</button>
+      </section>
     </section>
+
   </main>
 
   <footer>Drums Game | Copyright © 2022</footer>
