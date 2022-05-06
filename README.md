@@ -4,6 +4,8 @@
 
 Play drums project is a web app to have some fun playing drums.
 
+[Play drums web](https://play-drums.vercel.app/)
+
 ## Front end tech stack
 
 - **HTML**  
