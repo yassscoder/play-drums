@@ -13,7 +13,7 @@ body {
   background-size: cover;
   background-position: center;
   display: grid;
-  grid-template-rows: 5rem 1fr 3rem;
+  grid-template-rows: 6rem 1fr 3rem;
   font-family: sans-serif;
   font-size: 1rem;
   min-height: 100vh;
@@ -47,7 +47,7 @@ body > main > section {
   padding: 0 1rem;
   gap: 2rem;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.3rem;
   color: var(--light-color);
   text-align: center;
 }
@@ -72,7 +72,6 @@ body > main > section > section {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  transform: scale(1.1);
 }
 button > * {
   pointer-events: none;
