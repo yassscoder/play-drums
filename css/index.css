@@ -1,4 +1,4 @@
-/* @import url(normalize.css);
+
 @import url(colors.css); */
 
 /* RESET */
@@ -74,6 +74,10 @@ body > main > section > section {
   justify-content: space-evenly;
   transform: scale(1.1);
 }
+button > * {
+  pointer-events: none;
+}
+
 .drum > button span {
   color: #ffcc00;
   font-size: 2.3rem;
