@@ -27,7 +27,7 @@ body > header {
   align-items: center;
 }
 body > header h1 {
-  color: #ffcc00;
+  color: var(--main-color);
   font-family: "Oleo Script Swash Caps";
   font-size: 3rem;
   text-align: center;
@@ -48,7 +48,7 @@ body > main > section {
   gap: 2rem;
   font-size: 1.1rem;
   line-height: 1.5rem;
-  color: white;
+  color: var(--light-color);
   text-align: center;
 }
 body > main > section > section {
@@ -59,10 +59,10 @@ body > main > section > section {
   gap: 1.2rem;
 }
 .drum > button {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: thin solid #ffcc00;
+  background-color: var(--dark-color);
+  border: thin solid var(--main-color);
   border-radius: 50%;
-  color: white;
+  color: var(--light-color);
   width: 5.5rem;
   height: 5.5rem;
   padding: 0.5rem;
@@ -79,23 +79,23 @@ button > * {
 }
 
 .drum > button span {
-  color: #ffcc00;
+  color: var(--main-color);
   font-size: 2.3rem;
   font-weight: 600;
 }
 .recordControls > button {
-  border: thin solid #ffcc00;
+  border: thin solid var(--main-color);
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   font-weight: 600;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  background-color: var(--dark-color);
+  color: var(--light-color);
 }
 
 /* FOOTER */
 body > footer {
-  color: white;
-  border-top: thin solid #ffcc00;
+  color: var(--light-color);
+  border-top: thin solid  var(--main-color);
   text-align: center;
   padding: 1rem;
 }
