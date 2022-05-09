@@ -10,15 +10,15 @@ const tomHighBtn = document.querySelector("#tom-high-btn");
 const tomMidBtn = document.querySelector("#tom-mid-btn");
 const tomLowBtn = document.querySelector("#tom-low-btn");
 
-crashBtn.addEventListener("click", playWithKeyOrButton);
-hihatOpenBtn.addEventListener("click", playWithKeyOrButton);
-hihatCloseBtn.addEventListener("click", playWithKeyOrButton);
-kickBtn.addEventListener("click", playWithKeyOrButton);
-rideBtn.addEventListener("click", playWithKeyOrButton);
-snareBtn.addEventListener("click", playWithKeyOrButton);
-tomHighBtn.addEventListener("click", playWithKeyOrButton);
-tomMidBtn.addEventListener("click", playWithKeyOrButton);
-tomLowBtn.addEventListener("click", playWithKeyOrButton);
+crashBtn.addEventListener("click", delaySound);
+hihatOpenBtn.addEventListener("click", delaySound);
+hihatCloseBtn.addEventListener("click", delaySound);
+kickBtn.addEventListener("click", delaySound);
+rideBtn.addEventListener("click", delaySound);
+snareBtn.addEventListener("click", delaySound);
+tomHighBtn.addEventListener("click", delaySound);
+tomMidBtn.addEventListener("click", delaySound);
+tomLowBtn.addEventListener("click", delaySound);
 
 const validInputKeys = new Map();
 validInputKeys.set(65, "./sounds/crash.wav");
