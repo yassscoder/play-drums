@@ -2,4 +2,5 @@
 --main-color: hsl(48, 100%, 50%);
 --dark-color:hsl(0, 0%, 0%, 70%);
 --light-color: hsl(0, 0%, 100%);
+--pressed-control-color: hsla(48, 100%, 50%, 0.747);
 }

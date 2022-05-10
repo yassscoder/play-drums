@@ -128,3 +128,8 @@ body > footer {
     font-size: 1rem;
   }
 }
+
+.active-btn {
+  background-color: var(--pressed-control-color);
+  border: solid var(--light-color);
+}
