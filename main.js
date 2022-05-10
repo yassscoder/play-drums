@@ -51,7 +51,12 @@ function getSoundSource(event) {
     return soundSource;
   } else if (event.key && !validInputKeys.has(pressedKey)) {
     const error = new ReferenceError("Pressed key is not valid");
-    alert("Pressed key is not valid");
+    //alert("Pressed key is not valid");
+    Swal.fire({
+      icon: "warning",
+      title: "Pressed key is not valid",
+      text: "Please press a valid key",
+    });
     throw error;
   } else {
     const targetButton = event.target;
