@@ -15,7 +15,6 @@ body {
   grid-template-rows: 6rem 1fr 2rem;
   font-family: sans-serif;
   min-height: 100vh;
-  /* height: calc(var(--vh, 1vh) * 100); */
 }
 
 /* HEADER */
@@ -29,7 +28,7 @@ body > header > h1 {
   font-size: 3rem;
 }
 
-/* SECTION */
+/* ARTICLE */
 body > main > article > p {
   color: var(--light-color);
   font-size: 1rem;
@@ -43,6 +42,8 @@ body > main > article {
   justify-content: space-evenly;
   gap: 2.5rem;
 }
+
+/* SECTION */
 body > main > article > section {
   display: flex;
   justify-content: center;
@@ -75,6 +76,7 @@ button > * {
   color: var(--main-color);
   font-size: 2.3rem;
   font-weight: 600;
+  transition: all 0.07s;
 }
 
 /* BUTTONS - RECORD */
@@ -97,23 +99,30 @@ body > footer {
   padding: 0.5rem;
 }
 
+/* MEDIA */
 @media (min-width: 600px) {
   /* BODY */
   body {
     display: grid;
-    grid-template-rows: 8rem 1fr 2rem;
+    grid-template-rows: 10rem 1fr 2rem;
     font-family: sans-serif;
     padding: 0.5rem;
   }
   body > header h1 {
     font-size: 4rem;
   }
-
-  /* SECTION */
-  body > main > section {
+  
+  /* ARTICLE */
+  body > main > article > p {
+    font-size: 1.3rem;
+    line-height: 1.75rem;
+  }
+  body > main > article {
     gap: 5rem;
     font-size: 1.3rem;
   }
+
+  /* BUTTONS - RECORD */
   .btn-record {
     padding: 1rem 2.5rem;
     font-size: 1rem;

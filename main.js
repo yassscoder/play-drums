@@ -24,9 +24,12 @@ function getSoundSource(event) {
   } else if (event.key && !validInputKeys.has(pressedKey)) {
     const error = new ReferenceError("Pressed key is not valid");
     Swal.fire({
-      icon: "error",
-      title: "Pressed key is not valid",
-      text: "Please press a valid key",
+      icon: 'error',
+      title: 'Oops, that key is not valid!',
+      text: 'Please press only valid keys (A - S - D - F - G - H - J - K - L).',
+      confirmButtonColor: 'var(--main-color)',
+      iconColor: 'var(--main-color)',
+      color: 'var(--light-color)',
     });
     throw error;
   } else {
