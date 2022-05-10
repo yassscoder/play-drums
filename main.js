@@ -53,7 +53,7 @@ function getSoundSource(event) {
     const error = new ReferenceError("Pressed key is not valid");
     //alert("Pressed key is not valid");
     Swal.fire({
-      icon: "warning",
+      icon: "error",
       title: "Pressed key is not valid",
       text: "Please press a valid key",
     });
