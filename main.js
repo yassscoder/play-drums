@@ -77,6 +77,41 @@ function playWithKeyOrButton(event) {
 
 window.addEventListener("keydown", delaySound);
 
+// function delaySound(event) {
+//   setTimeout(playWithKeyOrButton, 1000, event);
+// }
+
+const recordedSession = [];
+let isRecording = false;
+
 function delaySound(event) {
-  setTimeout(playWithKeyOrButton, 1000, event);
+  if (isRecording) {
+    playWithKeyOrButton(event);
+    recordedSession.push({ event, time: Date.now() });
+  } else {
+    setTimeout(playWithKeyOrButton, 200, event);
+  }
+
+  console.log(recordedSession);
 }
+
+const playButton = document.querySelector("#play-btn");
+const recButton = document.querySelector("#rec-btn");
+const stopButton = document.querySelector("#stop-btn");
+
+recButton.addEventListener("click", () => {
+  isRecording = true;
+  recordedSession.length = 0;
+});
+
+stopButton.addEventListener("click", () => {
+  isRecording = false;
+});
+
+playButton.addEventListener("click", () => {
+  recordedSession.forEach((session, index) => {
+    setTimeout(() => {
+      playWithKeyOrButton(session.event);
+    }, recordedSession[index].time - recordedSession[0].time);
+  });
+});
