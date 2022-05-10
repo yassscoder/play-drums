@@ -2,15 +2,26 @@
 
 ## Introduction 📝
 
-Play drums project is a web app to have some fun playing drums.
+*Play drums project is a Javascript app to have some fun playing drums. It allows you to play different sounds by clicking buttons in the app or pressing some keys in your keyboard.*
 
+*We decided to pair most of the time in order to solve problems in partnership. Having an extra pair of eyes on the code helps us to face issues.*
+ 
 [Play drums web](https://play-drums.vercel.app/)
 
-## Front end tech stack
+## Front end tech stack 🏳️‍🌈
 
 - **HTML**  
 - **CSS**
-- **Javascript**
+- **Javascript (ES6)**
+
+## Tools 🧰
+
+- Trello
+- Excalidraw
+- Zoom
+- Visual Studio Code
+- Git/Github
+- Vercel (deployment)
 
 ## Authors 👩🏽‍💻
 
